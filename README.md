@@ -3,8 +3,10 @@ Integrate Azure Function with SQL Server using Node JS
 
 
 
-By default, AZ Functions does not support straight integration with Microsoft SQL Server. As a developer, you can always bring in a module or an external sdk into the context of the AZ Function. Using this technique, I am providing an option to execute straight SQL's in java script currently. I have another project that you can use if you are looking for a solution in Python. Remember, nodejs is asynchronous so the exec_sql method in sqlservebroker is declared as async and my actual query calls are in await mode. I had to pass in my context into that method otherwise the json response would be blank to the client!
+By default, AZ Functions does not support straight integration with Microsoft SQL Server. As a developer, you can always bring in a module or an external sdk into the context of the AZ Function. Using this technique, I am providing an option to execute straight SQL's in java script currently.
+Remember, nodejs is asynchronous so the exec_sql method in sqlservebroker is declared as async and my actual query calls are in await mode. I had to pass in my context into that method or else the json response would be blank to the client!
 
+I have another project that you can use if you are looking for a solution in Python.
 https://github.com/RobinGhosh64/integrateazfunctions_with_sqlserver.git
 
 Another implementation for C# will be provided soon.
